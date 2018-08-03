@@ -3,16 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
 	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked> 
-	<PostBuildEvent>ng build --aot</PostBuildEvent> 
 	<TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>	
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="src\app\_guards\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="ng build --aot" />
+  </Target>
 
 </Project>
