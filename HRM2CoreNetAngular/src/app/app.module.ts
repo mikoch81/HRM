@@ -31,7 +31,7 @@ export function tokenGetter() {
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(appRoutes),
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
