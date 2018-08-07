@@ -10,8 +10,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  
-
   jwtHelper = new JwtHelperService();
 
   constructor(private authService: AuthService) {
